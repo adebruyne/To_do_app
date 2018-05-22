@@ -28,3 +28,9 @@ $("input[type='text']").keypress(function(event){
        $("ul").append("<li><span><i class='fa fa-trash'></i> </span>" + todoText + "</li>");   //takes a string of html and appends those elements to whatever we selected
     }
 })
+
+
+//***fades text box in and out by clicking icon */
+$(".fa-plus").click(function(){
+    $("input[type='text']").fadeToggle()
+})
