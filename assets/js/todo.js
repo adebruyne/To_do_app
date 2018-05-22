@@ -8,3 +8,11 @@
 $("li").click(function(){
     $(this).toggleClass("completed");
 });
+
+//*************Click on X to delete */
+$("span").click(function(event){
+    $(this).parent().fadeOut(500, function(){       
+        $(this).remove();
+    });
+    event.stopPropagation(); //keeps the function from bubbling up to parent elements 
+})
